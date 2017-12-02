@@ -2,6 +2,7 @@
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * @emails react-core
+ * @flow
  */
 
 'use strict';
@@ -16,7 +17,7 @@ import {colors, media} from 'theme';
 
 import ossLogoPng from 'images/oss_logo.png';
 
-const Footer = ({layoutHasSidebar = false}) => (
+const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
   <footer
     css={{
       backgroundColor: colors.darker,
@@ -109,18 +110,10 @@ const Footer = ({layoutHasSidebar = false}) => (
               Conferences
             </FooterLink>
             <FooterLink to="/community/videos.html">Videos</FooterLink>
-            <ExternalFooterLink
-              href="https://github.com/facebook/react/wiki/Examples"
-              target="_blank"
-              rel="noopener">
-              Examples
-            </ExternalFooterLink>
-            <ExternalFooterLink
-              href="https://github.com/facebook/react/wiki/Complementary-Tools"
-              target="_blank"
-              rel="noopener">
+            <FooterLink to="/community/examples.html">Examples</FooterLink>
+            <FooterLink to="/community/debugging-tools.html">
               Complementary Tools
-            </ExternalFooterLink>
+            </FooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>More</MetaTitle>
